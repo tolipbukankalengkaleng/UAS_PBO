@@ -4,6 +4,8 @@
  */
 package tokoroti;
 import rotimanis.*;
+import rotitawar.*;
+import pizza.*;
 import beban.BebanBahan;
 
 /**
@@ -21,22 +23,31 @@ public class TokoRoti {
 
         RotiManisV1 rm1 = new RotiManisV1();
         RotiManisV2 rm2 = new RotiManisV2();
+        RotiManisV3 rm3 = new RotiManisV3();
+        RotiTawarV1 rt1 = new RotiTawarV1();
+        RotiTawarV2 rt2 = new RotiTawarV2();
+        PizzaV1 p1  = new PizzaV1(); 
       
 //      VARIABEL JUMLAH PESANAN TIAP PRODUK      
 
         rm1.pesanan = 50;
         rm2.pesanan = 100;
+        rm3.pesanan = 70;
+        rt1.pesanan = 20;
+        rt2.pesanan = 15;
+        p1.pesanan = 10;
         
+               
 //      HITUNG KEBUTUHAN TIAP BAHAN   
      
-        double kebutuhanTepung = rm1.hitungTerigu() + rm2.hitungTerigu();
-        double kebutuhanGula = rm1.hitungGula() + rm2.hitungGula();
-        double kebutuhanButter = rm1.hitungButter() + rm2.hitungButter();
-        double kebutuhanRagi = rm1.hitungRagi() + rm2.hitungRagi();
-        double kebutuhanSusuBubuk = rm1.hitungSusuBubuk() + rm2.hitungSusuBubuk();
-        double kebutuhanSusuCair = rm1.hitungSusuCair() + rm2.hitungSusuCair();
-        double kebutuhanTelur = rm1.hitungTelur() + rm2.hitungTelur();
-        double kebutuhanEs = rm1.hitungEs() + rm2.hitungEs();
+        double kebutuhanTepung = rm1.hitungTerigu() + rm2.hitungTerigu() + rm3.hitungTerigu() + rt1.hitungTerigu() + rt2.hitungTerigu() + p1.hitungTerigu();
+        double kebutuhanGula = rm1.hitungGula () + rm2.hitungGula() + rm3.hitungGula() + rt1.hitungGula() + rt2.hitungGula() + p1.hitungGula();
+        double kebutuhanButter = rm1.hitungButter () + rm2.hitungButter() + rm3.hitungButter() + rt1.hitungButter() + rt2.hitungButter() + p1.hitungButter();
+        double kebutuhanRagi = rm1.hitungRagi() + rm2.hitungRagi() + rm3.hitungRagi() + rt1.hitungRagi() + rt2.hitungRagi() + p1.hitungRagi();
+        double kebutuhanSusuBubuk = rm1.hitungSusuBubuk() + rm2.hitungSusuBubuk() + rm3.hitungSusuBubuk() + rt1.hitungSusuBubuk() + rt2.hitungSusuBubuk() + p1.hitungSusuBubuk();
+        double kebutuhanSusuCair = rm1.hitungSusuCair() + rm2.hitungSusuCair() + rm3.hitungSusuCair() + rt1.hitungSusuCair() + rt2.hitungSusuCair() + p1.hitungSusuCair();
+        double kebutuhanTelur = rm1.hitungTelur() + rm2.hitungTelur() + rm3.hitungTelur() + rt1.hitungTelur() + rt2.hitungTelur() + p1.hitungTelur();
+        double kebutuhanEs = rm1.hitungEs() + rm2.hitungEs() + rm3.hitungEs() + rt1.hitungEs() + rt2.hitungEs() + p1.hitungEs();
         
 //      TAMPILKAN BEBAN DALAM KILOGRAM ATAU GRAM
 
@@ -58,7 +69,10 @@ public class TokoRoti {
 
         rm1.harga();
         rm2.harga();
-        
+        rm3.harga();
+        rt1.harga();
+        rt2.harga();
+        p1.harga();    
     }
     
 }
